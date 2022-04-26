@@ -1,3 +1,3 @@
 # RSICC
 
-Our data will be publicly available.
+We will publish our LEVIR-CC dataset soon.
