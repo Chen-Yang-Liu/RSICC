@@ -1,7 +1,6 @@
 # Remote Sensing Image Change Captioning With Dual-Branch Transformers: A New Method and a Large Scale Dataset
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=Chen-Yang-Liu.RSICC.visitor)
 ![GitHub stars](https://badgen.net/github/stars/Chen-Yang-Liu/RSICC)
-[![](https://img.shields.io/badge/code--license-MIT-brightgreen)](#License)
 
 ## Share us a :star: if this repo does help
 
@@ -9,34 +8,16 @@ Here, we provide the pytorch implementation of the paper: "Remote Sensing Image 
 
 For more ore information, please see our published paper in [[IEEE](https://ieeexplore.ieee.org/document/9934924) | [Lab Server](http://levir.buaa.edu.cn/publications/ChangeCaptioning.pdf)]  ***(Accepted by TGRS 2022)***
 
-
-## LEVIR-CC Dataset
-To explore the Remote Sensing Image Change Captioning (RSICC) task, we build a large-scale dataset named LEVIR-CC, which contains 10077 pairs of bi-temporal RS images and 50385 sentences describing the differences between images. The novel dataset provides an opportunity to explore models that align visual changes and language. We believe the dataset will promote the research of RSICC. 
-
-Some examples of our dataset are as follows:
-![dataset_example](Example/dataset_example.png)
 ![RSICCformer_structure](Example/RSICCformer_structure.png)
 
 
-## Installation
-Clone this repo:
-```python
-git clone https://github.com/Chen-Yang-Liu/RSICC
-cd RSICC
-```
+## LEVIR-CC Dataset Download Source
+- All of the Dataset: [[Google Drive](https://drive.google.com/file/d/1YppN3c2WQtuwI0cwQL2otLgW7ewFW_Ut/view?usp=sharing)  &#124; [Baidu Pan](https://pan.baidu.com/s/1YrWcz090kdqOZ0lrbqXJJA) (code:nq9y)]
 
-## Quick Start
-You can run a demo to get started.
-```python
-python demo.py
-```
-## Prepare Dataset
-### download the LEVIR-CC dataset
-You could download the LEVIR-CD at
 
 The path list in the downloaded folder is as follows:
 ```python
-path to LEVIR-CD:
+path to LEVIR_CC_dataset:
                 ├─LevirCCcaptions.json
                 ├─images
                   ├─train
@@ -51,21 +32,44 @@ path to LEVIR-CD:
 ```
 where A contains images of pre-phase, B contains images of post-phase.
 
+The LEVIR-CC dataset contains 10077 pairs of bi-temporal remote sensing images and 50385 sentences describing the differences between images.
+Some examples of our dataset are as follows:
+![dataset_example](Example/dataset_example.png)
+
+## Installation
+Clone this repo:
+```python
+git clone https://github.com/Chen-Yang-Liu/RSICC
+cd RSICC
+```
+
+## Quick Start
+Firstly, you can download our RSICCformer pretrained model——by [[Google Drive](https://drive.google.com/file/d/1YppN3c2WQtuwI0cwQL2otLgW7ewFW_Ut/view?usp=sharing)  &#124; [Baidu Pan](https://pan.baidu.com/s/1SBGjVS0yd2KHdK9t4NuiyA) (code:2fbc)]
+
+After downloaded the pretrained model, you can put it in `./models_checkpoint/`.
+
+Then, run a demo to get started as follows:
+```python
+python caption.py --img_A ./Example/A/train_000016.png --img_B ./Example/B/train_000016.png --path ./models_checkpoint/
+```
+
 ## Train
-Prepare data for training:
+Preprocess dataset for training:
 ```python
 python create_input_files.py
 ```
-start training:
+After that, you can find some files in `./data/`
+
+Then, start training as follows:
 ```python
-python train.py
+python train.py  --data_folder ./data/ --savepath ./models_checkpoint/
 ```
-## Test and Compute captioning metrics
+## Evaluate
 ```python
-python eval.py
+python eval.py --data_folder ./data/ --path ./models_checkpoint/ --Split TEST
 ```
 
-## Please cite: 
+## Citation: 
 ```
 @ARTICLE{9934924,
   author={Liu, Chenyang and Zhao, Rui and Chen, Hao and Zou, Zhengxia and Shi, Zhenwei},
