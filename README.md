@@ -1,6 +1,6 @@
 # Remote Sensing Image Change Captioning With Dual-Branch Transformers: A New Method and a Large Scale Dataset
-![visitors](https://visitor-badge.glitch.me/badge?page_id=windvchen.LEVIR-Ship.visitor)
-![GitHub stars](https://badgen.net/github/stars/WindVChen/LEVIR-Ship)
+![visitors](https://visitor-badge.glitch.me/badge?page_id=Chen-Yang-Liu.RSICC.visitor)
+![GitHub stars](https://badgen.net/github/stars/Chen-Yang-Liu/RSICC)
 [![](https://img.shields.io/badge/code--license-MIT-brightgreen)](#License)
 
 ## Share us a :star: if this repo does help
