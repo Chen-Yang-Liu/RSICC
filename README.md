@@ -45,7 +45,8 @@ cd RSICC
 ```
 
 ## Quick Start
-Firstly, you can download our RSICCformer pretrained model——by [[Google Drive](https://drive.google.com/file/d/1YppN3c2WQtuwI0cwQL2otLgW7ewFW_Ut/view?usp=sharing)  &#124; [Baidu Pan](https://pan.baidu.com/s/1YrWcz090kdqOZ0lrbqXJJA) (code:nq9y)]
+Firstly, you can download our RSICCformer pretrained model——by [[Google Drive](https://drive.google.com/file/d/1YppN3c2WQtuwI0cwQL2otLgW7ewFW_Ut/view?usp=sharing)  &#124; [Baidu Pan](https://pan.baidu.com/s/1SBGjVS0yd2KHdK9t4NuiyA) (code:2fbc)]
+
 After downloaded the pretrained model, you can put it in ./models_checkpoint/.
 
 Then, run a demo to get started as follows:
