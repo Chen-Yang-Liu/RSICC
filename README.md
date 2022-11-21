@@ -1,7 +1,6 @@
 # Remote Sensing Image Change Captioning With Dual-Branch Transformers: A New Method and a Large Scale Dataset
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=Chen-Yang-Liu.RSICC.visitor)
 ![GitHub stars](https://badgen.net/github/stars/Chen-Yang-Liu/RSICC)
-[![](https://img.shields.io/badge/code--license-MIT-brightgreen)](#License)
 
 ## Share us a :star: if this repo does help
 
@@ -51,7 +50,7 @@ After downloaded the pretrained model, you can put it in `./models_checkpoint/`.
 
 Then, run a demo to get started as follows:
 ```python
-python demo.py
+python caption.py --img_A ./Example/A/train_000016.png --img_B ./Example/B/train_000016.png --path ./models_checkpoint/
 ```
 
 ## Train
@@ -63,11 +62,11 @@ After that, you can find some files in `./data/`
 
 Then, start training as follows:
 ```python
-python train.py
+python train.py  --data_folder ./data/ --savepath ./models_checkpoint/
 ```
 ## Evaluate
 ```python
-python eval.py
+python eval.py --data_folder ./data/ --path ./models_checkpoint/ --Split TEST
 ```
 
 ## Citation: 
