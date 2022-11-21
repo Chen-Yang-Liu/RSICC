@@ -52,6 +52,7 @@ Then, run a demo to get started as follows:
 ```python
 python caption.py --img_A ./Example/A/train_000016.png --img_B ./Example/B/train_000016.png --path ./models_checkpoint/
 ```
+After that, you can find the generated caption in `./eval_results/`
 
 ## Train
 Preprocess dataset for training:
