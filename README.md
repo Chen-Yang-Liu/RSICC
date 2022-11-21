@@ -14,7 +14,6 @@ For more ore information, please see our published paper in [[IEEE](https://ieee
 ## LEVIR-CC Dataset Download Source
 - All of the Dataset: [[Google Drive](https://drive.google.com/drive/folders/1cEv-BXISfWjw1RTzL39uBojH7atjLdCG?usp=sharing)  &#124; [Baidu Pan](https://pan.baidu.com/s/1YrWcz090kdqOZ0lrbqXJJA) (code:nq9y)]
 
-
 The path list in the downloaded folder is as follows:
 ```python
 path to LEVIR_CC_dataset:
@@ -44,7 +43,7 @@ cd RSICC
 ```
 
 ## Quick Start
-Firstly, you can download our RSICCformer pretrained model——by [[Google Drive](https://drive.google.com/drive/folders/1cEv-BXISfWjw1RTzL39uBojH7atjLdCG?usp=sharing)  &#124; [Baidu Pan](https://pan.baidu.com/s/1SBGjVS0yd2KHdK9t4NuiyA) (code:2fbc)]
+You can download our RSICCformer pretrained model——by [[Google Drive](https://drive.google.com/drive/folders/1cEv-BXISfWjw1RTzL39uBojH7atjLdCG?usp=sharing)  &#124; [Baidu Pan](https://pan.baidu.com/s/1SBGjVS0yd2KHdK9t4NuiyA) (code:2fbc)]
 
 After downloaded the pretrained model, you can put it in `./models_checkpoint/`.
 
@@ -55,16 +54,16 @@ python caption.py --img_A ./Example/A/train_000016.png --img_B ./Example/B/train
 After that, you can find the generated caption in `./eval_results/`
 
 ## Train
-Preprocess dataset for training:
+Firstly, put the downloaded dataset in `./LEVIR_CC_dataset/`.
+Then preprocess dataset for training as follows:
 ```python
 python create_input_files.py
 ```
-After that, you can find some files in `./data/`
-
-Then, start training as follows:
+After that, you can find some files in `./data/`. Then, start training as follows:
 ```python
 python train.py  --data_folder ./data/ --savepath ./models_checkpoint/
 ```
+
 ## Evaluate
 ```python
 python eval.py --data_folder ./data/ --path ./models_checkpoint/ --Split TEST
