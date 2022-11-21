@@ -47,7 +47,7 @@ cd RSICC
 ## Quick Start
 Firstly, you can download our RSICCformer pretrained model——by [[Google Drive](https://drive.google.com/file/d/1YppN3c2WQtuwI0cwQL2otLgW7ewFW_Ut/view?usp=sharing)  &#124; [Baidu Pan](https://pan.baidu.com/s/1SBGjVS0yd2KHdK9t4NuiyA) (code:2fbc)]
 
-After downloaded the pretrained model, you can put it in ./models_checkpoint/.
+After downloaded the pretrained model, you can put it in `./models_checkpoint/`.
 
 Then, run a demo to get started as follows:
 ```python
@@ -55,20 +55,22 @@ python demo.py
 ```
 
 ## Train
-Prepare data for training:
+Preprocess dataset for training:
 ```python
 python create_input_files.py
 ```
-Then, start training:
+After that, you can find some files in `./data/`
+
+Then, start training as follows:
 ```python
 python train.py
 ```
-## Test and Compute captioning metrics
+## Evaluate
 ```python
 python eval.py
 ```
 
-## Please cite: 
+## Citation: 
 ```
 @ARTICLE{9934924,
   author={Liu, Chenyang and Zhao, Rui and Chen, Hao and Zou, Zhengxia and Shi, Zhenwei},
