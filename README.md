@@ -47,6 +47,13 @@ You can download our RSICCformer pretrained model——by [[Google Drive](https:
 
 After downloaded the pretrained model, you can put it in `./models_checkpoint/`.
 
+## Demo
+Firstly, put the downloaded dataset in `./LEVIR_CC_dataset/`.
+Then preprocess dataset for training as follows:
+```python
+python create_input_files.py --min_word_freq 5
+```
+After that, you can find some files in `./data/`.
 Then, run a demo to get started as follows:
 ```python
 python caption.py --img_A ./Example/A/train_000016.png --img_B ./Example/B/train_000016.png --path ./models_checkpoint/
@@ -57,7 +64,7 @@ After that, you can find the generated caption in `./eval_results/`
 Firstly, put the downloaded dataset in `./LEVIR_CC_dataset/`.
 Then preprocess dataset for training as follows:
 ```python
-python create_input_files.py
+python create_input_files.py --min_word_freq 5
 ```
 After that, you can find some files in `./data/`. Then, start training as follows:
 ```python
