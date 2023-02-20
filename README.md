@@ -92,6 +92,7 @@ python eval.py --data_folder ./data/ --path ./models_checkpoint/ --Split TEST
   doi={10.1109/TGRS.2022.3218921}}
 ```
 ## Reference:
+Thanks to the following repository:
 https://github.com/sgrvinod/a-PyTorch-Tutorial-to-Image-Captioning.git
 
 
