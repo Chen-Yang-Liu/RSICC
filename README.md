@@ -50,6 +50,7 @@ Then preprocess dataset as follows:
 python create_input_files.py --min_word_freq 5
 ```
 After that, you can find some files in `./data/`.
+
 NOTE: For a fair comparison, we suggest that future researchers ensure `min_word_freq < 5`.
 
 ### Demo
