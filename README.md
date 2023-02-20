@@ -94,7 +94,7 @@ python eval.py --data_folder ./data/ --path ./models_checkpoint/ --Split TEST
 ```
 ## Reference:
 Thanks to the following repository:
-[[Google Drive](https://github.com/sgrvinod/a-PyTorch-Tutorial-to-Image-Captioning.git)]
+[a-PyTorch-Tutorial-to-Image-Captioning](https://github.com/sgrvinod/a-PyTorch-Tutorial-to-Image-Captioning.git)
 
 
 
