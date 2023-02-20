@@ -11,7 +11,8 @@ For more information, please see our published paper in [[IEEE](https://ieeexplo
 ![RSICCformer_structure](Example/RSICCformer_structure.png)
 
 
-## LEVIR-CC Dataset Download Source
+## LEVIR-CC Dataset 
+Download Source:
 - All of the Dataset: [[Google Drive](https://drive.google.com/drive/folders/1cEv-BXISfWjw1RTzL39uBojH7atjLdCG?usp=sharing)  &#124; [Baidu Pan](https://pan.baidu.com/s/1YrWcz090kdqOZ0lrbqXJJA) (code:nq9y)]
 
 The path list in the downloaded folder is as follows:
@@ -35,32 +36,34 @@ The LEVIR-CC dataset contains 10077 pairs of bi-temporal remote sensing images a
 Some examples of our dataset are as follows:
 ![dataset_example](Example/dataset_example.png)
 
-## Installation
+## RSICCfromer
+### Installation
 Clone this repo:
 ```python
 git clone https://github.com/Chen-Yang-Liu/RSICC
 cd RSICC
 ```
 
-## Quick Start
-You can download our RSICCformer pretrained model——by [[Google Drive](https://drive.google.com/drive/folders/1cEv-BXISfWjw1RTzL39uBojH7atjLdCG?usp=sharing)  &#124; [Baidu Pan](https://pan.baidu.com/s/1SBGjVS0yd2KHdK9t4NuiyA) (code:2fbc)]
-
-After downloaded the pretrained model, you can put it in `./models_checkpoint/`.
-
-## Demo
+### Data preparation
 Firstly, put the downloaded dataset in `./LEVIR_CC_dataset/`.
-Then preprocess dataset for training as follows:
+Then preprocess dataset as follows:
 ```python
 python create_input_files.py --min_word_freq 5
 ```
 After that, you can find some files in `./data/`.
+
+### Demo
+You can download our RSICCformer pretrained model——by [[Google Drive](https://drive.google.com/drive/folders/1cEv-BXISfWjw1RTzL39uBojH7atjLdCG?usp=sharing)  &#124; [Baidu Pan](https://pan.baidu.com/s/1SBGjVS0yd2KHdK9t4NuiyA) (code:2fbc)]
+
+After downloaded the pretrained model, you can put it in `./models_checkpoint/`.
+
 Then, run a demo to get started as follows:
 ```python
 python caption.py --img_A ./Example/A/train_000016.png --img_B ./Example/B/train_000016.png --path ./models_checkpoint/
 ```
 After that, you can find the generated caption in `./eval_results/`
 
-## Train
+### Train
 Firstly, put the downloaded dataset in `./LEVIR_CC_dataset/`.
 Then preprocess dataset for training as follows:
 ```python
@@ -71,7 +74,7 @@ After that, you can find some files in `./data/`. Then, start training as follow
 python train.py  --data_folder ./data/ --savepath ./models_checkpoint/
 ```
 
-## Evaluate
+### Evaluate
 ```python
 python eval.py --data_folder ./data/ --path ./models_checkpoint/ --Split TEST
 ```
