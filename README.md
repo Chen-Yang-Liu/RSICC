@@ -4,13 +4,6 @@
 
 ## Share us a :star: if this repo does help
 
-Here, we provide the pytorch implementation of the paper: "Remote Sensing Image Change Captioning With Dual-Branch Transformers: A New Method and a Large Scale Dataset". 
-
-For more information, please see our published paper in [[IEEE](https://ieeexplore.ieee.org/document/9934924) | [Lab Server](http://levir.buaa.edu.cn/publications/ChangeCaptioning.pdf)]  ***(Accepted by TGRS 2022)***
-
-![RSICCformer_structure](Example/RSICCformer_structure.png)
-
-
 ## LEVIR-CC Dataset 
 Download Source:
 - All of the Dataset: [[Google Drive](https://drive.google.com/drive/folders/1cEv-BXISfWjw1RTzL39uBojH7atjLdCG?usp=sharing)  &#124; [Baidu Pan](https://pan.baidu.com/s/1YrWcz090kdqOZ0lrbqXJJA) (code:nq9y)]
@@ -37,6 +30,12 @@ Some examples of our dataset are as follows:
 ![dataset_example](Example/dataset_example.png)
 
 ## RSICCfromer
+Here, we provide the pytorch implementation of the paper: "Remote Sensing Image Change Captioning With Dual-Branch Transformers: A New Method and a Large Scale Dataset". 
+
+For more information, please see our published paper in [[IEEE](https://ieeexplore.ieee.org/document/9934924) | [Lab Server](http://levir.buaa.edu.cn/publications/ChangeCaptioning.pdf)]  ***(Accepted by TGRS 2022)***
+
+![RSICCformer_structure](Example/RSICCformer_structure.png)
+
 ### Installation
 Clone this repo:
 ```python
