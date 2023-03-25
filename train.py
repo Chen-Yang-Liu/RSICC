@@ -44,8 +44,8 @@ def train(args, train_loader, encoder_image,encoder_feat, decoder, criterion, en
     best_bleu4 = 0.  # BLEU-4 score right now
 
     for i, (img_pairs, caps, caplens) in enumerate(train_loader):
-        if i == 20:
-            break
+#         if i == 20:
+#             break
         data_time.update(time.time() - start)
 
         # Move to GPU, if available
