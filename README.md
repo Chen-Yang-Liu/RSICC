@@ -36,11 +36,13 @@ For more information, please see our published paper in [[IEEE](https://ieeexplo
 
 ![RSICCformer_structure](Example/RSICCformer_structure.png)
 
-### Installation
-Clone this repo:
+### Installation and Dependencies
 ```python
 git clone https://github.com/Chen-Yang-Liu/RSICC
 cd RSICC
+conda create -n RSICCformer_env python=3.6
+conda activate RSICCformer_env
+pip install -r requirements.txt
 ```
 
 ### Data preparation
@@ -66,12 +68,6 @@ python caption.py --img_A ./Example/A/train_000016.png --img_B ./Example/B/train
 ```
 After that, you can find the generated caption in `./eval_results/`
 
-### Dependencies
-```python
-conda create -n RSICCformer_env python=3.6
-conda activate RSICCformer_env
-pip install -r requirements.txt
-```
 
 ### Train
 Make sure you performed the data preparation above. Then, start training as follows:
