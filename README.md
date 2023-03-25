@@ -50,9 +50,10 @@ Then preprocess dataset as follows:
 python create_input_files.py --min_word_freq 5
 ```
 After that, you can find some resulted files in `./data/`. 
+
 Besides, the resulted files can also be downloaded from here: [[Google Drive](https://drive.google.com/drive/folders/1cEv-BXISfWjw1RTzL39uBojH7atjLdCG?usp=sharing)  &#124; [Baidu Pan](https://pan.baidu.com/s/1YrWcz090kdqOZ0lrbqXJJA) (code:nq9y)]. Extract it to `./data/`.
 
-NOTE: For a fair comparison, we suggest that future researchers ensure `min_word_freq <= 5` or use our preprocessed data above with `min_word_freq = 5`.
+!NOTE: For a fair comparison, we suggest that future researchers ensure `min_word_freq <= 5` or use our preprocessed data above with `min_word_freq = 5`.
 
 ### Demo
 You can download our RSICCformer pretrained model——by [[Google Drive](https://drive.google.com/drive/folders/1cEv-BXISfWjw1RTzL39uBojH7atjLdCG?usp=sharing)  &#124; [Baidu Pan](https://pan.baidu.com/s/1SBGjVS0yd2KHdK9t4NuiyA) (code:2fbc)]
