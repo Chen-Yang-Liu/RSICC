@@ -67,12 +67,7 @@ python caption.py --img_A ./Example/A/train_000016.png --img_B ./Example/B/train
 After that, you can find the generated caption in `./eval_results/`
 
 ### Train
-Firstly, put the downloaded dataset in `./LEVIR_CC_dataset/`.
-Then preprocess dataset for training as follows:
-```python
-python create_input_files.py --min_word_freq 5
-```
-After that, you can find some files in `./data/`. Then, start training as follows:
+Make sure you performed the data preparation above. Then, start training as follows:
 ```python
 python train.py  --data_folder ./data/ --savepath ./models_checkpoint/
 ```
