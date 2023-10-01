@@ -1,6 +1,13 @@
-# Remote Sensing Image Change Captioning With Dual-Branch Transformers: A New Method and a Large Scale Dataset
+<div align="center">
+
+<h1><a href="https://ieeexplore.ieee.org/document/9934924">Remote Sensing Image Change Captioning With Dual-Branch Transformers: A New Method and a Large Scale Dataset</a></h1>
+
+**[Chenyang Liu](https://chen-yang-liu.github.io/), [Rui Zhao](https://ruizhaocv.github.io), [Hao Chen](http://chenhao.in/), [Zhengxia Zou](https://scholar.google.com.hk/citations?hl=en&user=DzwoyZsAAAAJ), and [Zhenwei Shi*✉](https://scholar.google.com.hk/citations?hl=en&user=kNhFWQIAAAAJ)**
+
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=Chen-Yang-Liu.RSICC.visitor)
 ![GitHub stars](https://badgen.net/github/stars/Chen-Yang-Liu/RSICC)
+
+</div>
 
 ## Share us a :star: if this repo does help
 
