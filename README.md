@@ -12,29 +12,7 @@
 ## Share us a :star: if this repo does help
 
 ## LEVIR-CC Dataset 
-Download Source:
-- All of the Dataset: [[Google Drive](https://drive.google.com/drive/folders/1cEv-BXISfWjw1RTzL39uBojH7atjLdCG?usp=sharing)  &#124; [Baidu Pan](https://pan.baidu.com/s/1YrWcz090kdqOZ0lrbqXJJA) (code:nq9y)]
-
-The path list in the downloaded folder is as follows:
-```python
-path to LEVIR_CC_dataset:
-                ├─LevirCCcaptions.json
-                ├─images
-                  ├─train
-                  │  ├─A
-                  │  ├─B
-                  ├─val
-                  │  ├─A
-                  │  ├─B
-                  ├─test
-                  │  ├─A
-                  │  ├─B
-```
-where A contains images of pre-phase, B contains images of post-phase.
-
-The LEVIR-CC dataset contains 10077 pairs of bi-temporal remote sensing images and 50385 sentences describing the differences between images.
-Some examples of our dataset are as follows:
-![dataset_example](Example/dataset_example.png)
+**Download [Link](https://github.com/Chen-Yang-Liu/LEVIR-CC-Dataset)**
 
 ## RSICCfromer
 Here, we provide the pytorch implementation of the paper: "Remote Sensing Image Change Captioning With Dual-Branch Transformers: A New Method and a Large Scale Dataset". 
