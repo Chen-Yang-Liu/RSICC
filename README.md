@@ -64,6 +64,10 @@ python train.py  --data_folder ./data/ --savepath ./models_checkpoint/
 ```python
 python eval.py --data_folder ./data/ --path ./models_checkpoint/ --Split TEST
 ```
+- Comparison with SOTA: 
+<div align="center">
+<img src="./Example/Comparison.png" width="600"></img>
+</div>
 
 ## Citation: 
 ```
