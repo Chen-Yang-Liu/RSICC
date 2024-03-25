@@ -19,67 +19,6 @@ normalize = transforms.Normalize(mean=[0.485, 0.456, 0.406],
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
-def visual_feat0(args, img_A_feat,img_B_feat):
-    img_A = imread(args.img_A)
-    img_B = imread(args.img_B)
-    dif_feat = numpy.absolute((img_B_feat[0,:1024,:,:] - img_A_feat[0,:1024,:,:]).mean(dim=0).cpu().numpy())
-    img_A_feat = img_A_feat[0,:1024,:,:].mean(dim=0).cpu().numpy()
-    img_B_feat = img_B_feat[0,:1024,:,:].mean(dim=0).cpu().numpy()
-
-    for i in range(1):
-        # print(i)
-        headmap_A = img_A_feat[:,:]
-        headmap_B = img_B_feat[:, :]
-
-
-        headmap_A = dif_feat
-        headmap_B = dif_feat
-
-        headmap_A /= np.max(headmap_A)  # (7,7)
-        headmap_B /= np.max(headmap_B)  # (7,7)
-
-        headmap_A = cv2.resize(headmap_A, (img_A.shape[1], img_A.shape[0]))
-        headmap_A = np.uint8(255 * headmap_A)
-        headmap_A = cv2.applyColorMap(255-headmap_A, cv2.COLORMAP_JET)
-        superimposed_img_A = headmap_A #* 0.2+ img_A * 0.8
-        cv2.imwrite('F:/LCY/change_caption/Change_Captioning_Transformer/feat_image/resnet/A/'+str(i) + '.png', superimposed_img_A)
-
-        headmap_B = cv2.resize(headmap_B, (img_A.shape[1], img_A.shape[0]))
-        headmap_B = np.uint8(255 * headmap_B)
-        headmap_B = cv2.applyColorMap(255-headmap_B, cv2.COLORMAP_JET)
-        superimposed_img_B = headmap_B #* 0.2 + img_B * 0.8
-        cv2.imwrite('F:/LCY/change_caption/Change_Captioning_Transformer/feat_image/resnet/B/' + str(i) + '.png', superimposed_img_B)
-
-
-def visual_feat(args, encoder_out):
-    img_A = imread(args.img_A)
-    img_B = imread(args.img_B)
-    dif_feat = numpy.absolute((encoder_out[:, 0, 512:,0].view(14,14,512) - encoder_out[:, 0, :512,0].view(14,14,512)).mean(dim=-1).cpu().numpy())
-    img_A_feat = encoder_out[:, 0, :512,0].view(14,14,512).mean(dim=-1).cpu().numpy()
-    img_B_feat = encoder_out[:, 0, 512:,0].view(14,14,512).mean(dim=-1).cpu().numpy()
-    for i in range(1):
-        # print(i)
-        headmap_A = img_A_feat[:,:]
-        headmap_B = img_B_feat[:, :]
-
-
-        headmap_A = dif_feat
-        headmap_B = dif_feat
-
-        headmap_A /= np.max(headmap_A)  # (7,7)
-        headmap_B /= np.max(headmap_B)  # (7,7)
-
-        headmap_A = cv2.resize(headmap_A, (img_A.shape[1], img_A.shape[0]))
-        headmap_A = np.uint8(255 * headmap_A)
-        headmap_A = cv2.applyColorMap(255-headmap_A, cv2.COLORMAP_JET)
-        superimposed_img_A = headmap_A #* 0.2+ img_A * 0.8
-        cv2.imwrite('F:/LCY/change_caption/Change_Captioning_Transformer/feat_image/RSICCformer/A/'+str(i) + '.png', superimposed_img_A)
-
-        headmap_B = cv2.resize(headmap_B, (img_A.shape[1], img_A.shape[0]))
-        headmap_B = np.uint8(255 * headmap_B)
-        headmap_B = cv2.applyColorMap(255-headmap_B, cv2.COLORMAP_JET)
-        superimposed_img_B = headmap_B #* 0.2 + img_B * 0.8
-        cv2.imwrite('F:/LCY/change_caption/Change_Captioning_Transformer/feat_image/RSICCformer/B/' + str(i) + '.png', superimposed_img_B)
 
 def save_captions(args, word_map, hypotheses):
     result_json_file = {}
@@ -164,14 +103,7 @@ def evaluate_transformer(args,encoder_image,encoder_feat,decoder):
         # Encode
         imgs_A = encoder_image(img_A)
         imgs_B = encoder_image(img_B)  # encoder_image :[1, 1024,14,14]
-        # visual_feat0(args,imgs_A,imgs_B)
-
         encoder_out = encoder_feat(imgs_A, imgs_B) # encoder_out: (S, batch, feature_dim)
-
-        # 可视化
-        # visual_feat(args,encoder_out)
-
-
 
         tgt = torch.zeros(52, k).to(device).to(torch.int64)
         tgt_length = tgt.size(0)
