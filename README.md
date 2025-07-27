@@ -11,6 +11,10 @@
 
 ## Share us a :star: if this repo does help
 
+### 🥳 New
+
+🔥 Our survey "**Remote Sensing Temporal Vision-Language Models: A Comprehensive Survey": [Arxiv](https://arxiv.org/abs/2412.02573) || [Github](https://github.com/Chen-Yang-Liu/Awesome-RS-Temporal-VLM)** 🔥 
+
 ## LEVIR-CC Dataset 
 **Download [Link](https://github.com/Chen-Yang-Liu/LEVIR-CC-Dataset)**
 
