@@ -49,7 +49,7 @@ Besides, the resulted files can also be downloaded from here: [[Google Drive](ht
 ### Inference Demo
 You can download our RSICCformer pretrained model——by [[Google Drive](https://drive.google.com/drive/folders/1cEv-BXISfWjw1RTzL39uBojH7atjLdCG?usp=sharing)  &#124; [Baidu Pan](https://pan.baidu.com/s/1SBGjVS0yd2KHdK9t4NuiyA) (code:2fbc)]
 
-After downloaded the pretrained model, you can put it in `./models_checkpoint/`.
+After downloaded the pretrained model (one ".pth.tar" file, please don't unzip it), you can put it in `./models_checkpoint/`.
 
 Then, run a demo to get started as follows:
 ```python
